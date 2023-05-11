@@ -1,14 +1,25 @@
 import { useState } from "react";
-import Navbar from "./pages/navbar/Navbar";
-import Hero from "./pages/landing/hero/Hero"
-import Todays from "./pages/landing/todays/Todays";
+import Landing from "./pages/landing/Landing";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/Footer";
+import Login from "./pages/login/Login";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import Register from "./pages/register/Register";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Todays/>
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route path="/home" element={<Landing />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

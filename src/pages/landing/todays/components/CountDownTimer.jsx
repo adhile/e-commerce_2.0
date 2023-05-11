@@ -22,7 +22,7 @@ const CountdownTimer = () => {
    
     const now = new Date().getTime();
     const target =
-      now + 2 * 24 * 60 * 60 * 1000 + 3 * 60 * 60 * 1000 + 2 * 60 * 1000;
+      now + 3 * 24 * 60 * 60 * 1000 + 2 * 60 * 60 * 1000 + 2 * 60 * 1000;
     localStorage.setItem("targetTime", target.toString());
     return target;
   }

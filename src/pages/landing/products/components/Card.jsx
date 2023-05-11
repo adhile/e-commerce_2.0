@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Heart, Eye } from "react-feather";
-
 function Card(props) {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -13,42 +12,40 @@ function Card(props) {
   };
 
   return (
-    <>
-      <div id="cards">
-        {/* card */}
-        <div className=" relative flex flex-col w-[270px] h-[350px] space-y-2 ">
-          {/* image-box */}
+    <div id="cards">
+      {/* card */}
+      <div className=" relative flex flex-col w-[270px] h-[350px] space-y-2  m-4 ">
+        {/* image-box */}
+        <div
+          className="relative  w-full flex justify-center items-center h-[270px] bg-cardBg "
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img src={props.cardImg} alt="" />
+          {/* add-to-cart button */}
           <div
-            className="relative  w-full flex justify-center items-center h-[270px] bg-cardBg "
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            className={`absolute bottom-0 w-full h-[41px] bg-black text-white flex items-center justify-center ${
+              isHovering
+                ? "visible opacity-100 transition duration-500 ease-in"
+                : "invisible opacity-0 transition duration-500 ease-out "
+            } `}
           >
-            <img src={props.cardImg} alt="" />
-            {/* add-to-cart button */}
-            <div
-              className={`absolute bottom-0 w-full h-[41px] bg-black text-white flex items-center justify-center ${
-                isHovering
-                  ? "visible opacity-100 transition duration-500 ease-in"
-                  : "invisible opacity-0 transition duration-500 ease-out "
-              } `}
-            >
-              <a href="#" className=" font-Poppins font-medium text-base">
-                Add To Cart
-              </a>
-            </div>
+            <a href="#" className=" font-Poppins font-medium text-base">
+              Add To Cart
+            </a>
           </div>
+        </div>
 
-          {/* card title */}
-          <h1 className="font-Poppins font-medium text-base">
-            {props.cardTitle}
-          </h1>
+        {/* card title */}
+        <h1 className="font-Poppins font-medium text-base">
+          {props.cardTitle}
+        </h1>
+        <div className="flex flex-row space-x-1">
           {/* card price */}
           <div className="font-Poppins font-medium text-base space-x-1">
             <span className="text-brickRed">{props.cardNewPrice}</span>{" "}
-            <span className="line-through opacity-50">
-              {props.cardOldPrice}
-            </span>
           </div>
+
           {/* card-rating */}
 
           <div className="flex items-center">
@@ -106,21 +103,24 @@ function Card(props) {
               (88)
             </p>
           </div>
-          {/* love-icon */}
-          <div className="absolute right-2 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white">
-            <Heart />
-          </div>
-          {/* eye-icon */}
-          <div className="absolute right-2 top-10 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white">
-            <Eye />
-          </div>
-          {/* offer-%-div */}
-          <div className="absolute left-3 rounded-sm w-[55px] h-[26px] bg-brickRed text-white flex items-center justify-center">
-            <p className="font-Poppins font-normal text-xs">-{props.cardOffer }%</p>
-          </div>
         </div>
+
+        {/* love-icon */}
+        <div className="absolute right-2 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white">
+          <Heart />
+        </div>
+        {/* eye-icon */}
+        <div className="absolute right-2 top-10 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white">
+          <Eye />
+        </div>
+        {/* offer-%-div */}
+        {props.cardTag && (
+          <div className="absolute left-3 rounded-sm w-[55px] h-[26px] bg-green-600 text-white flex items-center justify-center">
+            <p className="font-Poppins font-normal text-xs">NEW</p>
+          </div>
+        )}
       </div>
-    </>
+    </div>
   );
 }
 

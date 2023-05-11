@@ -1,17 +1,18 @@
 import React, { useState, useRef } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import CountDownTimer from "./components/CountDownTimer";
+
 import Card from "./components/Card";
-import { cards } from "../../../data/cards";
+import {cards } from "../../../data/cards"
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function Todays() {
+function Products() {
   const slider = React.useRef(null);
+
   const [currentSlide, setCurrentSlide] = useState(0);
-  const todaysCards = cards.filter((card) => card.todayTag === true);
+    const productsCard = cards.filter((card) => card.todayTag === false);
 
   const settings = {
     dots: false,
@@ -20,6 +21,8 @@ function Todays() {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    rows: 2,
+
     afterChange: (index) => {
       setCurrentSlide(index);
     },
@@ -31,20 +34,19 @@ function Todays() {
     <div>
       <section id="todays">
         {/* flex-container */}
-        <div className=" flex flex-col container mx-auto p-2 space-y-4 mt-[140px] ">
+        <div className=" flex flex-col container mx-auto p-2 space-y-4 mt-[60px] ">
           {/* title */}
           <div className="flex items-center justify-start space-x-2 w-full h-10 ">
             <div className=" w-[20px] bg-brickRed h-full rounded-md"></div>
-            <h3 className="text-brickRed">Today's</h3>
+            <h3 className="text-brickRed">Our Products</h3>
           </div>
           {/* flesh-sale */}
           <div className="flex items-center justify-between  ">
             {/* sale-timer */}
             <div className="flex items-center space-x-12 ">
-              <h1 className="font-Inter font-medium text-4xl">Flash Sales</h1>
-              <div>
-                <CountDownTimer />
-              </div>
+              <h1 className="font-Inter font-medium text-4xl">
+                Explore Our Products
+              </h1>
             </div>
             {/* button-left-right */}
             <div className="  flex items-center  space-x-4  p-4">
@@ -69,33 +71,31 @@ function Todays() {
             </div>
           </div>
           {/* cards */}
-          <div className=" container  flex flex-col justify-between p-4">
+          <div className=" container flex flex-col justify-between p-4">
             <Slider {...settings} ref={slider}>
-              {todaysCards.map((item, index) => {
+              {productsCard.map((item, index) => {
                 return (
                   <Card
                     key={index}
                     cardImg={item.ImageUrl}
                     cardTitle={item.title}
                     cardNewPrice={item.newPrice}
-                    cardOldPrice={item.oldPrice}
-                    cardOffer={ item.offer}
+                    cardTag={item.tag}
                   />
                 );
               })}
             </Slider>
           </div>
+
           {/* view all product button */}
 
           <button className="w-[234px] h-[56px] bg-brickRed text-white font-Poppins font-medium text-base mx-auto rounded ">
             View All Products
           </button>
         </div>
-        {/* line */}
-        <div className="border border-gray-400 w-[1170px] h-0 mx-auto mt-[60px] "></div>
       </section>
     </div>
   );
 }
 
-export default Todays;
+export default Products;
