@@ -14,7 +14,7 @@ function Brand() {
           <div className="flex items-center space-x-24 ">
             {/* brand */}
             <div className="w-[118px] h-[24px]">
-              <img src="../../../public/img/Logo.svg" alt="" />
+              <img src="./img/Logo.svg" alt="" />
             </div>
             {/* links */}
             <div className="flex w-[367px] h-[24px] font-Poppins text-base font-normal items-center space-x-12">
