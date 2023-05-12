@@ -5,7 +5,7 @@ function AddressNav() {
     <div>
       <section
         id="addressNav"
-        className="flex items-center h-[48px]   bg-black min-w-screen "
+        className=" mx-auto flex items-center h-[48px]   bg-black  "
       >
         {/* flex-cintainer */}
         <div className="container flex mx-auto  justify-between items-center pl-64 ">

@@ -10,8 +10,8 @@ import {
 function Footer() {
   return (
     <>
-      <section id="footer">
-        <div className="flex p-16  bg-black mt-[60px] min-w-screen">
+      <section id="footer" >
+        <div className=" mx-auto flex items-center justify-center p-16  bg-black mt-[60px] ">
           {/* box-1 */}
           <div className="flex flex-col  w-[217px] mr-6 space-y-4 text-white">
             <p className="font-Inter font-bold text-[24px]">Exclusive</p>
