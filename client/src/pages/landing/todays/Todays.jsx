@@ -77,7 +77,7 @@ function Todays() {
                     key={index}
                     cardImg={item.ImageUrl}
                     cardTitle={item.title}
-                    cardNewPrice={item.newPrice}
+                    cardPrice={item.price}
                     cardOldPrice={item.oldPrice}
                     cardOffer={ item.offer}
                   />

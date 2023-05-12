@@ -44,7 +44,7 @@ function Card(props) {
           </h1>
           {/* card price */}
           <div className="font-Poppins font-medium text-base space-x-1">
-            <span className="text-brickRed">{props.cardNewPrice}</span>{" "}
+            <span className="text-brickRed">{props.cardPrice}</span>{" "}
             <span className="line-through opacity-50">
               {props.cardOldPrice}
             </span>
@@ -120,7 +120,7 @@ function Card(props) {
           </div>
         </div>
       </div>
-    </>
+    </> 
   );
 }
 

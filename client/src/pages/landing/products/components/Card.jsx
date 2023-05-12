@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { React, useState } from "react";
 import { Heart, Eye } from "react-feather";
+import { wishlistContext } from "../../../../context/WishlistContextProvider";
 function Card(props) {
   const [isHovering, setIsHovering] = useState(false);
+  const { WishlistItems, addToWishlist } = useContext(wishlistContext);
+  const [isWishlistClicked, setIsWishlistClicked] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -43,7 +47,7 @@ function Card(props) {
         <div className="flex flex-row space-x-1">
           {/* card price */}
           <div className="font-Poppins font-medium text-base space-x-1">
-            <span className="text-brickRed">{props.cardNewPrice}</span>{" "}
+            <span className="text-brickRed">{props.cardPrice}</span>{" "}
           </div>
 
           {/* card-rating */}
@@ -106,12 +110,26 @@ function Card(props) {
         </div>
 
         {/* love-icon */}
-        <div className="absolute right-2 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white">
-          <Heart />
+        <div
+          className={`absolute right-2 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white  hover:bg-brickRed hover:text-white `}
+        >
+          <button
+            onClick={(event) => {
+              event.preventDefault();
+              addToWishlist(props.cardId);
+              setIsWishlistClicked(true);
+            }}
+          >
+            <Heart
+              className={`${isWishlistClicked && "fill-brickRed stroke-none"}`}
+            />
+          </button>
         </div>
         {/* eye-icon */}
-        <div className="absolute right-2 top-10 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white">
-          <Eye />
+        <div className="absolute right-2 top-10 w-[34px] h-[34px] flex items-center justify-center rounded-full bg-white hover:bg-brickRed hover:text-white">
+          <button>
+            <Eye />
+          </button>
         </div>
         {/* offer-%-div */}
         {props.cardTag && (

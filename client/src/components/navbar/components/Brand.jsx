@@ -2,9 +2,23 @@ import React from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { useLocation } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 function Brand() {
   const location = useLocation();
+
+  function IconRender() {
+    if (location.pathname !== "/" && location.pathname !== "/register") {
+      return (
+        <>
+          <Link to="/wishlist">
+            <AiOutlineHeart size={32} />
+          </Link>
+          <AiOutlineShoppingCart size={32} />
+        </>
+      );
+    }
+  }
+
   return (
     <div>
       <section id="brand-nav" className=" border-b-2 h-[94px]  ">
@@ -18,18 +32,21 @@ function Brand() {
             </div>
             {/* links */}
             <div className="flex w-[367px] h-[24px] font-Poppins text-base font-normal items-center space-x-12">
-              <a className="hover:underline underline-offset-8  " href="/home">
+              <Link to="/home" className="hover:underline underline-offset-8  ">
                 Home
-              </a>
-              <a className="hover:underline underline-offset-8 " href="#">
+              </Link>
+              <Link to="#" className="hover:underline underline-offset-8 ">
                 Contact
-              </a>
-              <a className="hover:underline underline-offset-8 " href="#">
+              </Link>
+              <Link to="#" className="hover:underline underline-offset-8 ">
                 About
-              </a>
-              <a className="hover:underline underline-offset-8 " href="/register">
+              </Link>
+              <Link
+                to="/register"
+                className="hover:underline underline-offset-8 "
+              >
                 SignUp
-              </a>
+              </Link>
             </div>
           </div>
           {/* right-search-cart */}
@@ -49,12 +66,7 @@ function Brand() {
               />
             </div>
             {/* heart-cart */}
-            {location.pathname === "/home" && (
-              <>
-                <AiOutlineHeart size={32} />
-                <AiOutlineShoppingCart size={32} />
-              </>
-            )}
+            {IconRender()}
           </div>
         </div>
       </section>

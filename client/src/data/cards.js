@@ -1,53 +1,60 @@
 export const cards = [
   {
+    id: 1,
     ImageUrl: "/img/card1.svg",
     title: "HAVIT HV-G92 Gamepad",
-    newPrice: "$120",
+    price: "$120",
     oldPrice: "150$",
     offer: "40",
     todayTag: true,
   },
   {
+    id: 2,
     ImageUrl: "/img/card2.svg",
     title: "AK-900 Wired Keyboard",
-    newPrice: "$960",
+    price: "$960",
     oldPrice: "$1160",
     offer: "40",
     todayTag: true,
   },
   {
+    id: 3,
     ImageUrl: "/img/card3.svg",
     title: "IPS LCD Gaming Monitor",
-    newPrice: "$370",
+    price: "$370",
     oldPrice: "$400",
     offer: "40",
     todayTag: true,
   },
   {
+    id: 4,
     ImageUrl: "/img/card4.svg",
     title: "S-Series Comfort Chair ",
-    newPrice: "$375",
+    price: "$375",
     oldPrice: "$400",
     offer: "40",
     todayTag: true,
   },
   {
+    id: 5,
     ImageUrl: "/img/card4.svg",
     title: "S-Series Comfort Chair ",
-    newPrice: "$375",
+    price: "$375",
     oldPrice: "$400",
     offer: "40",
     todayTag: true,
   },
   {
+    id: 6,
     ImageUrl: "/img/card4.svg",
     title: "S-Series Comfort Chair ",
-    newPrice: "$375",
+    price: "$375",
     oldPrice: "$400",
     offer: "40",
     todayTag: true,
   },
   {
+    id: 7,
     ImageUrl: "/img/p1.svg",
     title: "HAVIT HV-G92 Gamepad",
     price: "$120",
@@ -55,6 +62,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 8,
     ImageUrl: "/img/p2.svg",
     title: "AK-900 Wired Keyboard",
     price: "$960",
@@ -62,6 +70,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 9,
     ImageUrl: "/img/p3.svg",
     title: "IPS LCD Gaming Monitor",
     price: "$370",
@@ -69,6 +78,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 10,
     ImageUrl: "/img/p4.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -76,6 +86,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 11,
     ImageUrl: "/img/p5.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -83,6 +94,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 12,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -90,6 +102,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 13,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -97,6 +110,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 14,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -104,6 +118,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 15,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -111,6 +126,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 16,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -118,6 +134,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 17,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -125,6 +142,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 18,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
@@ -132,6 +150,7 @@ export const cards = [
     todayTag: false,
   },
   {
+    id: 19,
     ImageUrl: "/img/p6.svg",
     title: "S-Series Comfort Chair ",
     price: "$375",
