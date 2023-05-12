@@ -4,7 +4,7 @@ function Register() {
   return (
     <>
       <section id="register">
-        <div className="flex  h-[781px] mt-[60px] mb-[140px] mr-[135px]">
+        <div className="flex  h-[781px] mt-[60px] mb-[140px] mr-[135px] min-w-screen">
           <img src="./img/login.svg" alt="" />
           <div className="flex flex-col  w-full pl-16  py-[125px] space-y-8   ">
             <div className="space-y-4">

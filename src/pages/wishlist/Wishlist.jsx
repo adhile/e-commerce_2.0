@@ -31,7 +31,7 @@ function Wishlist() {
 
   return (
     <>
-      <section id="wishlist">
+      <section id="wishlist" className="min-w-screen">
         {/* flex-container */}
         <div className=" flex flex-col container mx-auto p-2 space-y-4 mt-[140px] ">
           {/* title */}

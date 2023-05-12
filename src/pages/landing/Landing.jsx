@@ -9,7 +9,7 @@ import Prefooter from "./Prefooter"
 
 function Landing() {
   return (
-    <div>
+    <div className="min-w-screen">
       <Hero />
       <Todays />
       <Category />

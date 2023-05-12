@@ -21,7 +21,7 @@ function Brand() {
 
   return (
     <div>
-      <section id="brand-nav" className=" border-b-2 h-[94px]  ">
+      <section id="brand-nav" className=" border-b-2 h-[94px] min-w-screen  ">
         {/* flex-container */}
         <div className=" container flex mx-auto pt-[36px]  justify-between px-6 items-center ">
           {/* left-brand-links */}
